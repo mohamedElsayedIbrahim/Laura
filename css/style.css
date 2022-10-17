@@ -1,0 +1,167 @@
+:root
+{
+    --maincolor:#ffb727;
+    --smile:#20b38e;
+    --clock:#2cbdee;
+    --award:#ffb459;
+}
+
+.smile-color
+{
+    color: var(--smile);
+}
+
+.clock-color
+{
+    color: var(--clock);
+}
+
+.award-color
+{
+    color: var(--award);
+}
+.title
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.title .backed-text
+{
+    font-size: 4rem;
+    color: rgba(119, 119, 119,0.2);
+}
+
+@media screen and (max-width:567px) {
+    .title .backed-text
+    {
+        font-size: 3rem;
+        color: rgba(119, 119, 119,0.2);
+    }
+}
+.title .front-text
+{
+    position: absolute;
+    bottom: 0px;
+}
+.site-header
+{
+    background-image: url(./../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.site-header .navbar
+{
+    position: relative;
+    z-index: 13;
+    background-color: transparent
+}
+
+.site-header .navbar .navbar-nav .nav-item .nav-link
+{
+    color: #eee;
+}
+
+.site-header .navbar .navbar-nav .nav-item .nav-link:hover
+{
+    color: var(--maincolor);
+}
+
+.site-header .navbar .navbar-nav .nav-item .active
+{
+    color: var(--maincolor);
+}
+.site-header .bio-info
+{
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.site-header .bio-info .down-sign
+{
+    color: #eee;
+    transform: rotate(90deg);
+    transition-property: color,animation;
+    transition-duration: 1s , 1s;
+    transition-timing-function: ease-in-out,ease-in-out;
+    position: relative;
+    animation-name: sign;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.site-header .bio-info .down-sign:hover
+{
+    color: var(--maincolor);
+}
+
+@keyframes sign {
+    0%{top:0px}
+    100%{top:10px}
+}
+
+#about .list-info svg
+{
+    color: var(--maincolor);
+}
+
+#about .list-info strong
+{
+    color: #555;
+}
+
+#about .list-info 
+{
+    line-height: 2.5rem;
+}
+
+#about .skills p ,
+#about .tech-skill h3 ,
+#about .tech-skill h4
+{
+    font-size: 14px;
+}
+
+#resume .detials
+{
+    border-left: #777 1px solid;
+    position: relative;
+}
+
+#resume .detials .circle
+{
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(-50%,-50%);
+    border: #777 1px solid;
+}
+
+#resume .detials .info .duration
+{
+    background-color: #eee;
+    padding: 5px 15px;
+}
+
+#resume .fix-p
+{
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+}
+
+#resume .detials .info .school
+{
+    font-style: italic;
+}
